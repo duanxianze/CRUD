@@ -7,6 +7,7 @@
       <ul>
       <% @event.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
+        <%= f.collection_select(:category_id, Category.all, :id, :name) %>
       <% end %>
       </ul>
 <% end %>
